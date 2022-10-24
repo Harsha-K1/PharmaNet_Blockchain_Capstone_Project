@@ -1,0 +1,272 @@
+{
+	"info": {
+		"_postman_id": "dca2cb6e-367b-4c07-93ce-2cf45878e5d3",
+		"name": "Supply Chain",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "createPO_VGPharmaToSunPharma",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "orgType",
+							"value": "distributor",
+							"type": "text"
+						},
+						{
+							"key": "buyerCRN",
+							"value": "DIST001",
+							"type": "text"
+						},
+						{
+							"key": "sellerCRN",
+							"value": "MAN001",
+							"type": "text"
+						},
+						{
+							"key": "drugName",
+							"value": "Paracetamol",
+							"type": "text"
+						},
+						{
+							"key": "quantity",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:3000/createPO"
+			},
+			"response": []
+		},
+		{
+			"name": "createShipment_SunPharmaToVGPharmaViaFedEx",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "orgType",
+							"value": "manufacturer",
+							"type": "text"
+						},
+						{
+							"key": "buyerCRN",
+							"value": "DIST001",
+							"type": "text"
+						},
+						{
+							"key": "drugName",
+							"value": "Paracetamol",
+							"type": "text"
+						},
+						{
+							"key": "listOfAssets",
+							"value": "001,002,003",
+							"type": "text"
+						},
+						{
+							"key": "transporterCRN",
+							"value": "TRA001",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:3000/createShipment"
+			},
+			"response": []
+		},
+		{
+			"name": "updateShipment_FedEx_SunPharmaToVGPharma",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "orgType",
+							"value": "transporter",
+							"type": "text"
+						},
+						{
+							"key": "buyerCRN",
+							"value": "DIST001",
+							"type": "text"
+						},
+						{
+							"key": "drugName",
+							"value": "Paracetamol",
+							"type": "text"
+						},
+						{
+							"key": "transporterCRN",
+							"value": "TRA001",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:3000/updateShipment"
+			},
+			"response": []
+		},
+		{
+			"name": "createPO_upgradToVGPharma",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "orgType",
+							"value": "retailer",
+							"type": "text"
+						},
+						{
+							"key": "buyerCRN",
+							"value": "RET002",
+							"type": "text"
+						},
+						{
+							"key": "sellerCRN",
+							"value": "DIST001",
+							"type": "text"
+						},
+						{
+							"key": "drugName",
+							"value": "Paracetamol",
+							"type": "text"
+						},
+						{
+							"key": "quantity",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:3000/createPO"
+			},
+			"response": []
+		},
+		{
+			"name": "createShipment_VGPharmaToUpgradViaBlueDart",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "orgType",
+							"value": "distributor",
+							"type": "text"
+						},
+						{
+							"key": "buyerCRN",
+							"value": "RET002",
+							"type": "text"
+						},
+						{
+							"key": "drugName",
+							"value": "Paracetamol",
+							"type": "text"
+						},
+						{
+							"key": "listOfAssets",
+							"value": "001,002",
+							"type": "text"
+						},
+						{
+							"key": "transporterCRN",
+							"value": "TRA002",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:3000/createShipment"
+			},
+			"response": []
+		},
+		{
+			"name": "updateShipment_BlueDart_VGPharmaToUpgrad",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "orgType",
+							"value": "transporter",
+							"type": "text"
+						},
+						{
+							"key": "buyerCRN",
+							"value": "RET002",
+							"type": "text"
+						},
+						{
+							"key": "drugName",
+							"value": "Paracetamol",
+							"type": "text"
+						},
+						{
+							"key": "transporterCRN",
+							"value": "TRA002",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:3000/updateShipment"
+			},
+			"response": []
+		},
+		{
+			"name": "retailDrug",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "orgType",
+							"value": "retailer",
+							"type": "text"
+						},
+						{
+							"key": "drugName",
+							"value": "Paracetamol",
+							"type": "text"
+						},
+						{
+							"key": "serialNo",
+							"value": "001",
+							"type": "text"
+						},
+						{
+							"key": "retailerCRN",
+							"value": "RET002",
+							"type": "text"
+						},
+						{
+							"key": "customerAadhar",
+							"value": "AAD001",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:3000/retailDrug"
+			},
+			"response": []
+		}
+	]
+}

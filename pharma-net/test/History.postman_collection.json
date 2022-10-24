@@ -1,0 +1,67 @@
+{
+	"info": {
+		"_postman_id": "82020c60-1e01-4c02-bea9-6756f3145a2a",
+		"name": "History",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "viewHistory",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "orgType",
+							"value": "consumer",
+							"type": "text"
+						},
+						{
+							"key": "drugName",
+							"value": "Paracetamol",
+							"type": "text"
+						},
+						{
+							"key": "serialNo",
+							"value": "001",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:3000/viewHistory"
+			},
+			"response": []
+		},
+		{
+			"name": "viewDrugCurrentState",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "orgType",
+							"value": "consumer",
+							"type": "text"
+						},
+						{
+							"key": "drugName",
+							"value": "Paracetamol",
+							"type": "text"
+						},
+						{
+							"key": "serialNo",
+							"value": "001",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:3000/viewDrugCurrentState"
+			},
+			"response": []
+		}
+	]
+}
